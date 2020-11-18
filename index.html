@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с формами Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h1>Работа с формами Vue.js</h1>
+
+    <div id="app1">
+        <input v-model="message" placeholder="отредактируй меня">
+        <p>Введённое сообщение: {{ message }}</p>
+    </div>
+    <hr>
+    <div id="app2">
+        <span>Введённое многострочное сообщение:</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="введите несколько строчек" cols="30" rows="10"></textarea>
+    </div>
+    <hr>
+    <div id="app3">
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+    </div>
+    <hr>
+    <div id="app4">
+        <input type="checkbox" id="jack" value="Джек" v-model="checkedNames">
+        <label for="jack">Джек</label>
+        <input type="checkbox" id="john" value="Джон" v-model="checkedNames">
+        <label for="john">Джон</label>
+        <input type="checkbox" id="mike" value="Майк" v-model="checkedNames">
+        <label for="mike">Майк</label>
+        <br>
+        <span>отмеченные имена: {{ checkedNames }}</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
